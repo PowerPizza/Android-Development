@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Android-Navigation</string>
+    <string name="hello_home_fragment">Hello Home fragment</string>
+    <string name="hello_profile_fragment">Hello Profile fragment</string>
+    <string name="hello_about_fragment">Hello About fragment</string>
+
+    <string name="text_home">Home</string>
+    <string name="text_about">About</string>
+    <string name="text_profile">Profile</string>
+</resources>
