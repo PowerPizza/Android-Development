@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Android-Navigation-BottomNavBar</string>
+    <string name="home_text">Home</string>
+    <string name="profile_text">Profile</string>
+    <string name="about_text">About</string>
+    <string name="back_text">Back</string>
+
+    <string name="welcome_profile">Welcome to android\'s profile\nName : Android</string>
+    <string name="about_this">About\nAndroid is a mobile operating system developed by Google, primarily for touchscreen devices like smartphones and tablets.</string>
+</resources>
