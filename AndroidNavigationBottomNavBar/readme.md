@@ -1,22 +1,23 @@
 # Android Navigation With Bottom Navigation Bar
-In this example we are going to see how to connect bottom navigation bar with android navigation which we have learned in [Android-Navigation]() example. Do check it out first before moving here.
+In this example we are going to see how to connect *bottom navigation bar* with *android navigation* which we have learned in [Android-Navigation](https://github.com/PowerPizza/Android-Development/tree/master/Android-Navigation) example. Do check it out first before moving here.
 
 # Target
-We have to create a bottom navigation bar and connect it to navigation or navigation graph so that user can easily navigate through different fragmanets of app by clicking options of bottom navigation bar.  
-Also we need to add top tool bar such that if user has navigated to different fragment other than homeFragment then they see a back arrow icon in top tool bar clicking on which they can come back to home fragment.
+We have to create a *bottom navigation bar* and connect it to navigation or *navigation graph* so that user can easily navigate through different fragments of app by clicking options of bottom navigation bar.  
+Also we need to add top *tool bar* such that if user has navigated to different fragment other than **homeFragment** then they see a back arrow icon in top tool bar clicking on which they can come back to *home fragment*.
 
 # Creating fragments
 * Create different fragments in different packages inside application's package.
 * For more info about creating fragments checkout [fragment creation](https://github.com/PowerPizza/Android-Development/tree/master/Android-Navigation#step-1--fragment-creation)
 
 # Setup navigation
-* Setup navigation and its components navHostFragment, navGraph, NavController as per the [Android-Navigation](https://github.com/PowerPizza/Android-Development/tree/master/Android-Navigation#android-navigation)
+* Setup navigation and its components **navHostFragment**, **navGraph**, **navController** as per the [Android-Navigation](https://github.com/PowerPizza/Android-Development/tree/master/Android-Navigation#android-navigation)  
+**Note :** No `<fragment />` of navigation resource file is interconnected. Check [my_navs.xml](app/src/main/res/navigation/my_navs.xml)
 
 # Setting up Tool Bar
-* To create tool bar add `<androidx.appcompat.widget.Toolbar />` element to `activity_main.xml`.
+* To create *tool bar* add `<androidx.appcompat.widget.Toolbar />` element to `activity_main.xml`.
 * Set attributes of ToolBar properly, specially id (***tool_bar** for this example*) and theme.
 * In java file use `Toolbar tb = findViewById(R.id.tool_bar);` to get app's tool bar.
-* Call `setSupportActionBar(tb);` which tells system to use tool bar as app's native action bar.
+* Call `setSupportActionBar(tb);` which tells system to use tool bar as app's *native action bar*.
 
 # Setting up bottom navigation bar
 * To setup bottom navigation bar add `<com.google.android.material.bottomnavigation.BottomNavigationView />` in `activity_main.xml`.
@@ -37,3 +38,13 @@ Note that ID of menu item should be same as its corresponding destination (_<fra
 * Create AppBarConfiguration which have navController's navGraph linked with it using `AppBarConfiguration app_bar_conf = new AppBarConfiguration.Builder(ctrl.getGraph()).build();`.
 * Use overloaded method setupWithNavController() of NavigationUi class to link ToolBar with navigation controller and AppBarConfiguration.
 * Now as user will switch on to different fragment a back arrow icon will appear in top tool bar clicking on which they can come back to home destination.
+
+# Read more
+This example is created with help of android docs, read them for more information. Some most used portion of android docs in creating this example given below :-
+> [Setting up app bar - ToolBar](https://developer.android.com/develop/ui/views/components/appbar/setting-up#java)
+ 
+> [Tool Bar Android Widget](https://developer.android.com/reference/androidx/appcompat/widget/Toolbar)
+
+> [Connect navigation to ToolBar that allows user to go back](https://developer.android.com/guide/navigation/integrations/ui#top_app_bar)
+
+> [Connect UI components to bottom navigation bar](https://developer.android.com/guide/navigation/integrations/ui#bottom_navigation)
